@@ -25,19 +25,19 @@ npm install @jiaxinjiang/nest-config --save
 Let's imagine that we have a folder called src/config in our project that contains several configuration files.
 
 ```bash
-/src
-├── app.module.ts
 ├── env
 │   ├── env
 │   ├── env.dev
 │   ├── env.prod
 │   ├── env.test
-├── config
-│   ├── logger.config.ts
-│   ├── database.config.ts
-│   ├── global.config.ts
-│   ├── rabbitmq.ts
-│   └── redis.config.ts
+├── src
+│   ├── app.module.ts
+│   ├── config
+│       ├── logger.config.ts
+│       ├── database.config.ts
+│       ├── global.config.ts
+│       ├── rabbitmq.config.ts
+│       └── redis.config.ts
 ```
 
 Some file examples.
@@ -104,7 +104,7 @@ class SomeService {
     private rabbitmqConfig;
     constructor(private readonly config: ConfigService) {
         this.databaseConfig = config.get('database'); // src/config/database.config.ts
-        this.rabbitmqConfig = config.get('rabbitmq'); // src/config/rabbitmq.ts
+        this.rabbitmqConfig = config.get('rabbitmq'); // src/config/rabbitmq.config.ts
     }
     
     get databaseHost() {
