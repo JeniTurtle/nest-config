@@ -123,5 +123,3 @@ class SomeService {
     constructor(@InjectConfig() private readonly config: ConfigService) {}
 }
 ```
-
-### Environment Configuration
