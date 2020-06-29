@@ -1,6 +1,6 @@
 {
   "name": "@jiaxinjiang/nest-config",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Configuration component for NestJs.",
   "keywords": [
     "nest",

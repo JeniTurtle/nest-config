@@ -5,7 +5,7 @@ import { ConfigCoreModule } from './config.core.module';
 import { ConfigService } from './config.service';
 
 const ENV = process.env.NODE_ENV;
-const rootPath = path.join(__dirname, '../../');
+const rootPath = path.join(__dirname, '../../../../dist');
 const defaultPath = 'config/**/!(*.d).{ts,js}';
 const configOptions = {
   path: path.resolve(process.cwd(), 'env', !ENV ? '.env' : `.env.${ENV}`),
